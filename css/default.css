@@ -1,0 +1,49 @@
+/**
+ * File: default.css
+ * Author: Yusuf Shakeel
+ * Date: 01-Feb-2015 Sunday
+ * Copyright (c) 2015 Yusuf Shakeel.
+ */
+
+.body-head{
+	height: 200px;
+}
+
+h1{
+	font-weight: 300;
+	line-height: 1;
+}
+
+.social-img{
+	width: 128px;
+	height: 128px;
+	margin-top: 5%;
+}
+
+.coverphoto-container{
+	padding: 0;
+	margin-bottom: 64px;
+}
+
+.row-padding{
+	padding: 20px 5px;
+}
+
+.hr-divider{
+	margin: 64px 0;
+}
+
+.footer{
+	margin-top: 64px;
+	background-color: #0080d5;
+	color: #fff;
+}
+
+/* responsive
+------------------ */
+
+@media (max-width: 768px) {
+	h1{
+		font-size: 24px;
+	}
+}
