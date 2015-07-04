@@ -10,8 +10,17 @@
     src: url(../font/Pacifico.ttf);
 }
 
+@font-face {
+    font-family: fontCourgetteRegular;
+    src: url(../font/Courgette-Regular.ttf);
+}
+
 .fontPacifico {
 	font-family: fontPacifico, verdana, helvatica, arial;
+}
+
+.fontCourgetteRegular {
+	font-family: fontCourgetteRegular, verdana, helvatica, arial;
 }
 
 .body-head{
