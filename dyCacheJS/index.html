@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>dyCacheJS - Yusuf Shakeel - GitHub</title>
+    <title>dyCacheJS - Yusuf Shakeel</title>
 
     <!-- twitter bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
@@ -300,6 +300,31 @@
 
             <a name="array-methods"></a>
             <h4 class="text-center"><a href="#array-methods">Array Methods</a></h4>
+
+            <!-- arrInit() -->
+            <a name="arrInit"></a>
+            <h4><code>arrInit(key)</code></h4>
+
+            <p>This will create a new array referred by <code>key</code> in the cache.</p>
+
+            <p>If array referred by <code>key</code> exists in the cache then it is overwritten.</p>
+
+            <pre><code>obj.arrInit('users');    // create a new array by the name users</code></pre>
+
+            <div>
+                <a class="btn btn-primary"
+                   role="button"
+                   data-toggle="collapse"
+                   href="#collapse-arrInit"
+                   aria-expanded="false"
+                   aria-controls="collapse-arrInit">Output</a>
+            </div>
+            <div class="collapse" id="collapse-arrInit">
+            </div>
+
+            <!-- arrInit() ends here -->
+
+            <hr>
 
             <!-- arrPush() -->
             <a name="arrPush"></a>
@@ -682,6 +707,31 @@
 
             <a name="object-methods"></a>
             <h4 class="text-center"><a href="#object-methods">Object Methods</a></h4>
+
+            <!-- oInit() -->
+            <a name="oInit"></a>
+            <h4><code>oInit(key)</code></h4>
+
+            <p>This will create a new object in the cache by the name <code>key</code>.</p>
+
+            <p>If object referred by <code>key</code> exists in the cache then it will be overwritten.</p>
+
+            <pre><code>obj.oInit('players');    // creates a new object players</code></pre>
+
+            <div>
+                <a class="btn btn-primary"
+                   role="button"
+                   data-toggle="collapse"
+                   href="#collapse-oInit"
+                   aria-expanded="false"
+                   aria-controls="collapse-oInit">Output</a>
+            </div>
+            <div class="collapse" id="collapse-oInit">
+            </div>
+
+            <!-- oInit() ends here -->
+
+            <hr>
 
             <!-- oSet() -->
             <a name="oSet"></a>
@@ -1427,7 +1477,7 @@
 </script>
 
 <!-- dyCacheJS -->
-<script src="https://cdn.jsdelivr.net/npm/dycachejs@1.4.0/dist/js/dyCache.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/dycachejs@1.4.0/src/js/index-page-example.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/dycachejs@1.5.0/dist/js/dyCache.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/dycachejs@1.5.0/src/js/index-page-example.js"></script>
 </body>
 </html>
