@@ -1,0 +1,1433 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Index Page</title>
+
+    <!-- twitter bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- dyScrollUpJS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/dyscrollupjs@1.1.4/css/dyscrollup.min.css">
+
+</head>
+<body>
+
+<div class="container">
+    <div class="row">
+
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="text-center">
+                <h1>dyCacheJS</h1>
+                <p>Cache data using JavaScript in the browser.</p>
+
+                <div class="text-center">
+                    <a class="btn btn-default btn-lg"
+                       href='https://github.com/yusufshakeel/dyCacheJS/releases'>Download</a>
+                    <a class="btn btn-default btn-lg" href='https://github.com/yusufshakeel/dyCacheJS'>GitHub</a>
+                </div>
+
+                <h4>Created by: <a href='https://github.com/yusufshakeel'>Yusuf Shakeel</a></h4>
+
+            </div>
+
+            <div class="text-center">
+                <h3>License</h3>
+                <p>It's free and released under <a href="https://github.com/yusufshakeel/dyCacheJS/blob/master/LICENSE">MIT
+                    License</a> Copyright (c) 2018 <a href="https://github.com/yusufshakeel">Yusuf Shakeel</a></p>
+            </div>
+
+        </div>
+
+        <div class="col-xs-12 col-sm-12 col-md-6 col-md-offset-3">
+
+            <h3 class="text-center">Getting Started</h3>
+
+            <hr>
+
+            <h4>Include the dyCacheJS file</h4>
+
+            <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;dyCacheJS Demo&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;!-- some html goes here --&gt;
+
+&lt;!-- script --&gt;
+&lt;script src=&quot;path/to/dyCache.min.js&quot;&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+            <br>
+
+            <h4>Instantiate an object</h4>
+
+            <p>Now, instantiate an object of the <code>dyCache</code> class.</p>
+
+            <pre><code>var obj = new dyCache();</code></pre>
+
+            <div>
+                <a class="btn btn-primary"
+                   role="button"
+                   data-toggle="collapse"
+                   href="#collapse-new-object"
+                   aria-expanded="false"
+                   aria-controls="collapse-new-object">Output</a>
+            </div>
+            <div class="collapse" id="collapse-new-object">
+            </div>
+
+            <br>
+
+            <p class="text-center">Note!
+                <br>
+                Output represents the state of the cache after the execution of the last method.
+            </p>
+
+
+            <h3 class="text-center">Content</h3>
+
+            <ul>
+                <li><a href="#set-and-get-methods">Set and Get Methods</a></li>
+                <li><a href="#cache-methods">Cache Methods</a></li>
+                <li><a href="#array-methods">Array Methods</a></li>
+                <li><a href="#object-methods">Object Methods</a></li>
+                <li><a href="#stack-methods">Stack Methods</a></li>
+                <li><a href="#queue-methods">Queue Methods</a></li>
+            </ul>
+
+            <hr>
+
+            <a name="set-and-get-methods"></a>
+            <h4 class="text-center"><a href="#set-and-get-methods">Set and Get Methods</a></h4>
+
+            <!-- set() -->
+
+            <a name="set"></a>
+            <h4><code>set(key, value)</code></h4>
+
+            <p>This will create a key in the cache and will set a value.</p>
+
+            <p>The <code>value</code> can be a number, string, array or object.</p>
+
+            <p>If the <code>key</code> exists in the cache then it is overwritten.</p>
+
+            <pre><code>obj.set('num', 10);  // setting numeric value</code></pre>
+            <pre><code>obj.set('str', 'Yusuf Shakeel'); //setting string value</code></pre>
+            <pre><code>obj.set('user', { username: 'yusufshakeel', points: 10 });   // setting object value</code></pre>
+            <pre><code>obj.set('arr', [1, 2, 3]);   // setting array value</code></pre>
+
+            <div>
+                <a class="btn btn-primary"
+                   role="button"
+                   data-toggle="collapse"
+                   href="#collapse-set"
+                   aria-expanded="false"
+                   aria-controls="collapse-set">Output</a>
+            </div>
+            <div class="collapse" id="collapse-set">
+            </div>
+
+            <!-- set() ends here -->
+
+            <hr>
+
+            <!-- get() -->
+
+            <a name="get"></a>
+            <h4><code>get(key)</code></h4>
+
+            <p>This will fetch the value of a given key in the cache.</p>
+
+            <p>If <code>key</code> does not exists then it will return <code>undefined</code>.</p>
+
+            <pre><code>obj.get('num');</code></pre>
+
+            <pre><code>obj.get('str');</code></pre>
+
+            <pre><code>obj.get('user');</code></pre>
+
+            <pre><code>obj.get('arr');</code></pre>
+
+            <div>
+                <a class="btn btn-primary"
+                   role="button"
+                   data-toggle="collapse"
+                   href="#collapse-get"
+                   aria-expanded="false"
+                   aria-controls="collapse-get">Output</a>
+            </div>
+            <div class="collapse" id="collapse-get">
+            </div>
+
+            <!-- get() ends here -->
+
+            <hr>
+
+            <a name="cache-methods"></a>
+            <h4 class="text-center"><a href="#cache-methods">Cache Methods</a></h4>
+
+            <!-- length() -->
+
+            <a name="length"></a>
+            <h4><code>length()</code></h4>
+
+            <p>This will give the total number of keys in the cache.</p>
+
+            <p>Returns a number.</p>
+
+            <pre><code>obj.length();</code></pre>
+
+            <div>
+                <a class="btn btn-primary"
+                   role="button"
+                   data-toggle="collapse"
+                   href="#collapse-length"
+                   aria-expanded="false"
+                   aria-controls="collapse-length">Output</a>
+            </div>
+            <div class="collapse" id="collapse-length">
+            </div>
+
+            <!-- length() ends here -->
+
+            <hr>
+
+            <!-- keys() -->
+
+            <a name="keys"></a>
+            <h4><code>keys()</code></h4>
+
+            <p>This will give all the keys in the cache.</p>
+
+            <p>Returns an array.</p>
+
+            <pre><code>obj.keys();</code></pre>
+
+            <div>
+                <a class="btn btn-primary"
+                   role="button"
+                   data-toggle="collapse"
+                   href="#collapse-keys"
+                   aria-expanded="false"
+                   aria-controls="collapse-keys">Output</a>
+            </div>
+            <div class="collapse" id="collapse-keys">
+            </div>
+
+            <!-- keys() ends here -->
+
+            <hr>
+
+            <!-- del() -->
+
+            <a name="del"></a>
+            <h4><code>del(key)</code></h4>
+
+            <p>This will delete a key from the cache.</p>
+
+            <pre><code>obj.del('num');</code></pre>
+
+            <div>
+                <a class="btn btn-primary"
+                   role="button"
+                   data-toggle="collapse"
+                   href="#collapse-del"
+                   aria-expanded="false"
+                   aria-controls="collapse-del">Output</a>
+            </div>
+            <div class="collapse" id="collapse-del">
+            </div>
+
+            <!-- del() ends here -->
+
+            <hr>
+
+            <!-- exists() -->
+
+            <a name="exists"></a>
+            <h4><code>exists(key)</code></h4>
+
+            <p>This checks if a given key exists in the cache.</p>
+
+            <p>Returns boolean value: true/false.</p>
+
+            <pre><code>obj.exists('num');</code></pre>
+
+            <pre><code>obj.exists('str');</code></pre>
+
+            <div>
+                <a class="btn btn-primary"
+                   role="button"
+                   data-toggle="collapse"
+                   href="#collapse-exists"
+                   aria-expanded="false"
+                   aria-controls="collapse-exists">Output</a>
+            </div>
+            <div class="collapse" id="collapse-exists">
+            </div>
+
+            <!-- exists() ends here -->
+
+            <hr>
+
+            <!-- purge() -->
+
+            <a name="purge"></a>
+            <h4><code>purge()</code></h4>
+
+            <p>This will remove all the keys from the cache.</p>
+
+            <pre><code>obj.purge();</code></pre>
+
+            <div>
+                <a class="btn btn-primary"
+                   role="button"
+                   data-toggle="collapse"
+                   href="#collapse-purge"
+                   aria-expanded="false"
+                   aria-controls="collapse-purge">Output</a>
+            </div>
+            <div class="collapse" id="collapse-purge">
+            </div>
+
+            <!-- purge() ends here -->
+
+            <hr>
+
+            <a name="array-methods"></a>
+            <h4 class="text-center"><a href="#array-methods">Array Methods</a></h4>
+
+            <!-- arrPush() -->
+            <a name="arrPush"></a>
+            <h4><code>arrPush(key, value)</code></h4>
+
+            <p>This will create a <code>key</code> (if not exists) in the cache
+                which is an array and will push the <code>value</code>
+                from the right side of the array.</p>
+
+            <p><code>value</code> can be a number, string, object or array.</p>
+
+            <pre><code>obj.arrPush('users', {username: 'yusufshakeel', points: 10});    // push object</code></pre>
+            <pre><code>obj.arrPush('users', [1, 2, 3]); // push array</code></pre>
+            <pre><code>obj.arrPush('users', 9999);  // push number</code></pre>
+            <pre><code>obj.arrPush('users', 'Hello World'); // push string</code></pre>
+
+            <div>
+                <a class="btn btn-primary"
+                   role="button"
+                   data-toggle="collapse"
+                   href="#collapse-arrPush"
+                   aria-expanded="false"
+                   aria-controls="collapse-arrPush">Output</a>
+            </div>
+            <div class="collapse" id="collapse-arrPush">
+            </div>
+
+            <!-- arrPush() ends here -->
+
+            <hr>
+
+            <!-- arrMPush() -->
+            <a name="arrMPush"></a>
+            <h4><code>arrMPush(key, value)</code></h4>
+
+            <p>This will push multiple values in an array referred by the
+                <code>key</code> in the cache.</p>
+
+            <p><code>value</code> will be pushed from the right side.</p>
+
+            <p>If <code>key</code> does not exists then it will be created.</p>
+
+            <p><code>value</code> is an array of elements. Where, an element can be a number, string, object or array.
+            </p>
+
+            <pre><code>obj.arrMPush('users', [100, 'superman', ['a1', 'b2', 200], { id: 10, points: 20}]);</code></pre>
+
+            <div>
+                <a class="btn btn-primary"
+                   role="button"
+                   data-toggle="collapse"
+                   href="#collapse-arrMPush"
+                   aria-expanded="false"
+                   aria-controls="collapse-arrMPush">Output</a>
+            </div>
+            <div class="collapse" id="collapse-arrMPush">
+            </div>
+
+            <!-- arrMPush() ends here -->
+
+            <hr>
+
+            <!-- arrLPush() -->
+            <a name="arrLPush"></a>
+            <h4><code>arrLPush(key, value)</code></h4>
+
+            <p>This will create a <code>key</code> (if not exists) in the cache
+                which is an array and will push the <code>value</code>
+                from the left side of the array.</p>
+
+            <p><code>value</code> can be a number, string, object or array.</p>
+
+            <pre><code>obj.arrLPush('users', {username: 'qwerty', points: 50});</code></pre>
+
+            <div>
+                <a class="btn btn-primary"
+                   role="button"
+                   data-toggle="collapse"
+                   href="#collapse-arrLPush"
+                   aria-expanded="false"
+                   aria-controls="collapse-arrLPush">Output</a>
+            </div>
+            <div class="collapse" id="collapse-arrLPush">
+            </div>
+
+            <!-- arrLPush() ends here -->
+
+            <hr>
+
+            <!-- arrMLPush() -->
+            <a name="arrMLPush"></a>
+            <h4><code>arrMLPush(key, value)</code></h4>
+
+            <p>This will push multiple values in an array referred by the
+                <code>key</code> in the cache.</p>
+
+            <p><code>value</code> will be pushed from the left side.</p>
+
+            <p>If <code>key</code> does not exists then it will be created.</p>
+
+            <p><code>value</code> is an array of elements. Where, an element can be a number, string, object or array.
+            </p>
+
+            <pre><code>obj.arrMLPush('users', [1, 'hi', [1, 3], { m: 1 }]);</code></pre>
+
+            <div>
+                <a class="btn btn-primary"
+                   role="button"
+                   data-toggle="collapse"
+                   href="#collapse-arrMLPush"
+                   aria-expanded="false"
+                   aria-controls="collapse-arrMLPush">Output</a>
+            </div>
+            <div class="collapse" id="collapse-arrMLPush">
+            </div>
+
+            <!-- arrMLPush() ends here -->
+
+            <hr>
+
+            <!-- arrGet() -->
+            <a name="arrGet"></a>
+            <h4><code>arrGet(key, [index, end])</code></h4>
+
+            <p>This will return all the elements in the array referred by
+                the given <code>key</code> in the cache.</p>
+
+            <p>If the <code>key</code> does not exists then return <code>null</code>.</p>
+
+            <p><code>index</code> is optional. If set then return the element at the given index.</p>
+            <p><code>end</code> is optional. If set then return the element from start <code>index</code> to
+                <code>end</code> index.</p>
+
+            <p>Note! Array indexing starts from 0.</p>
+
+            <pre><code>obj.arrGet('users'); // this will return all elements in the array referred by users key</code></pre>
+            <pre><code>obj.arrGet('unknown');   // this will return null</code></pre>
+            <pre><code>obj.arrGet('users', 1);   // this will return element at index 1</code></pre>
+            <pre><code>obj.arrGet('users', 1, 3);   // this will return element from index 1 to 3</code></pre>
+
+            <div>
+                <a class="btn btn-primary"
+                   role="button"
+                   data-toggle="collapse"
+                   href="#collapse-arrGet"
+                   aria-expanded="false"
+                   aria-controls="collapse-arrGet">Output</a>
+            </div>
+            <div class="collapse" id="collapse-arrGet">
+            </div>
+
+            <!-- arrGet() ends here -->
+
+            <hr>
+
+            <!-- arrLength() -->
+            <a name="arrLength"></a>
+            <h4><code>arrLength(key)</code></h4>
+
+            <p>This will return the total number of elements in the array
+                referred by <code>key</code> in the cache.</p>
+
+            <p>If the <code>key</code> does not exists in the cache then <code>-1</code> is returned.</p>
+
+            <pre><code>obj.arrLength('users');</code></pre>
+            <pre><code>obj.arrLength('unknown');    // this will return -1 as key does not exists in the cache</code></pre>
+
+            <div>
+                <a class="btn btn-primary"
+                   role="button"
+                   data-toggle="collapse"
+                   href="#collapse-arrLength"
+                   aria-expanded="false"
+                   aria-controls="collapse-arrLength">Output</a>
+            </div>
+            <div class="collapse" id="collapse-arrLength">
+            </div>
+
+            <!-- arrLength() ends here -->
+
+            <hr>
+
+            <!-- arrPop() -->
+            <a name="arrPop"></a>
+            <h4><code>arrPop(key)</code></h4>
+
+            <p>This will pop an element from the right side of an array referred by given
+                <code>key</code> in the cache.</p>
+
+            <p>If the <code>key</code> does not exists in the cache then <code>null</code> is returned.</p>
+            <p>To avoid ambiguity check if the key exists and total number of elements in the array.</p>
+
+            <pre><code>obj.arrPop('users');</code></pre>
+
+            <div>
+                <a class="btn btn-primary"
+                   role="button"
+                   data-toggle="collapse"
+                   href="#collapse-arrPop"
+                   aria-expanded="false"
+                   aria-controls="collapse-arrPop">Output</a>
+            </div>
+            <div class="collapse" id="collapse-arrPop">
+            </div>
+
+            <!-- arrPop() ends here -->
+
+            <hr>
+
+            <!-- arrLPop() -->
+            <a name="arrLPop"></a>
+            <h4><code>arrLPop(key)</code></h4>
+
+            <p>This will pop an element from the left side of an array referred by given
+                <code>key</code> in the cache.</p>
+
+            <p>If the <code>key</code> does not exists in the cache then <code>null</code> is returned.</p>
+            <p>To avoid ambiguity check if the key exists and total number of elements in the array.</p>
+
+            <pre><code>obj.arrLPop('users');</code></pre>
+
+            <div>
+                <a class="btn btn-primary"
+                   role="button"
+                   data-toggle="collapse"
+                   href="#collapse-arrLPop"
+                   aria-expanded="false"
+                   aria-controls="collapse-arrLPop">Output</a>
+            </div>
+            <div class="collapse" id="collapse-arrLPop">
+            </div>
+
+            <!-- arrLPop() ends here -->
+
+            <hr>
+
+            <!-- arrInsertAt() -->
+            <a name="arrInsertAt"></a>
+            <h4><code>arrInsertAt(key, index, value)</code></h4>
+
+            <p>This will insert a <code>value</code> at a given <code>index</code>
+                in an array referred by <code>key</code> in the cache.</p>
+
+            <p><code>value</code> can be a number, string, array or object.</p>
+
+            <p>On success return true. Otherwise false.</p>
+
+            <pre><code>obj.arrInsertAt('users', 3, {username: 'foo', points: 99});</code></pre>
+
+            <div>
+                <a class="btn btn-primary"
+                   role="button"
+                   data-toggle="collapse"
+                   href="#collapse-arrInsertAt"
+                   aria-expanded="false"
+                   aria-controls="collapse-arrInsertAt">Output</a>
+            </div>
+            <div class="collapse" id="collapse-arrInsertAt">
+            </div>
+
+            <!-- arrInsertAt() ends here -->
+
+            <hr>
+
+            <!-- arrMInsertAt() -->
+            <a name="arrMInsertAt"></a>
+            <h4><code>arrMInsertAt(key, index, value)</code></h4>
+
+            <p>This will insert multiple <code>value</code> at a given <code>index</code>
+                in an array referred by <code>key</code> in the cache.</p>
+
+            <p><code>index</code> is the index at which the new elements are inserted.</p>
+
+            <p><code>value</code> is an array of elements.
+                Each element can be a number, string, array or object.</p>
+
+            <p>On success return true. Otherwise false.</p>
+
+            <pre><code>obj.arrMInsertAt('users', 1, [ {id: 9999, name: 'yusufshakeel'}, 10, 'happy', [100] ]);</code></pre>
+
+            <div>
+                <a class="btn btn-primary"
+                   role="button"
+                   data-toggle="collapse"
+                   href="#collapse-arrMInsertAt"
+                   aria-expanded="false"
+                   aria-controls="collapse-arrMInsertAt">Output</a>
+            </div>
+            <div class="collapse" id="collapse-arrMInsertAt">
+            </div>
+
+            <!-- arrMInsertAt() ends here -->
+
+            <hr>
+
+            <!-- arrUpdateElem() -->
+            <a name="arrUpdateElem"></a>
+            <h4><code>arrUpdateElem(key, index, value)</code></h4>
+
+            <p>This will update the value of an element at given <code>index</code>
+                in the array referred by the <code>key</code> in the cache.</p>
+
+            <p>On success return true. Otherwise false.</p>
+
+            <p>Note! Array indexing starts from 0.</p>
+
+            <pre><code>obj.arrUpdateElem('users', 0, { username: 'tintin', points: 50 }); // this will return true</code></pre>
+
+            <div>
+                <a class="btn btn-primary"
+                   role="button"
+                   data-toggle="collapse"
+                   href="#collapse-arrUpdateElem"
+                   aria-expanded="false"
+                   aria-controls="collapse-arrUpdateElem">Output</a>
+            </div>
+            <div class="collapse" id="collapse-arrUpdateElem">
+            </div>
+
+            <!-- arrUpdateElem() ends here -->
+
+            <hr>
+
+            <!-- arrDeleteElem() -->
+            <a name="arrDeleteElem"></a>
+            <h4><code>arrDeleteElem(key, index)</code></h4>
+
+            <p>This will delete element at given <code>index</code> of the array referred by the
+                <code>key</code> in the cache.</p>
+
+            <p>On success it will return the deleted element in an array. Otherwise, false.</p>
+
+            <pre><code>obj.arrDeleteElem('users', 0);   // delete element at index 0</code></pre>
+
+            <div>
+                <a class="btn btn-primary"
+                   role="button"
+                   data-toggle="collapse"
+                   href="#collapse-arrDeleteElem"
+                   aria-expanded="false"
+                   aria-controls="collapse-arrDeleteElem">Output</a>
+            </div>
+            <div class="collapse" id="collapse-arrDeleteElem">
+            </div>
+
+            <!-- arrDeleteElem() ends here -->
+
+            <hr>
+
+            <!-- arrDeleteElems() -->
+            <a name="arrDeleteElems"></a>
+            <h4><code>arrDeleteElems(key, start, [deleteCount])</code></h4>
+
+            <p>This will delete <code>deleteCount</code> number of elements from the
+                index <code>start</code> of the array referred by the
+                <code>key</code> in the cache.</p>
+
+            <p><code>deleteCount</code> is optional. If not present then delete till the end.</p>
+
+            <p>On success it will return the deleted elements in an array. Otherwise, false.</p>
+
+            <pre><code>obj.arrDeleteElems('users', 2, 3);   // delete 3 elements from index 2</code></pre>
+            <pre><code>obj.arrDeleteElems('users', 6);   // delete all elements from index 6 till end</code></pre>
+            <pre><code>obj.arrDeleteElems('users', 0, 3);   // delete 3 elements from the start index</code></pre>
+
+            <div>
+                <a class="btn btn-primary"
+                   role="button"
+                   data-toggle="collapse"
+                   href="#collapse-arrDeleteElems"
+                   aria-expanded="false"
+                   aria-controls="collapse-arrDeleteElems">Output</a>
+            </div>
+            <div class="collapse" id="collapse-arrDeleteElems">
+            </div>
+
+            <!-- arrDeleteElems() ends here -->
+
+            <hr>
+
+            <a name="object-methods"></a>
+            <h4 class="text-center"><a href="#object-methods">Object Methods</a></h4>
+
+            <!-- oSet() -->
+            <a name="oSet"></a>
+            <h4><code>oSet(key, oKey, oValue)</code></h4>
+
+            <p>This will create an object in the cache by the name <code>key</code>
+                and will add a property <code>oKey</code> having value <code>oValue</code>.</p>
+
+            <p>If <code>oKey</code> exists in the <code>key</code> then it will be overwritten.</p>
+
+            <p><code>oValue</code> can be a number, string, array or object.</p>
+
+            <pre><code>obj.oSet('players', 'p1', { id: 'p1', username: 'yusufshakeel' });</code></pre>
+            <pre><code>obj.oSet('players', 'p2', { id: 'p2', username: 'dawoodshakeel' });</code></pre>
+
+            <div>
+                <a class="btn btn-primary"
+                   role="button"
+                   data-toggle="collapse"
+                   href="#collapse-oSet"
+                   aria-expanded="false"
+                   aria-controls="collapse-oSet">Output</a>
+            </div>
+            <div class="collapse" id="collapse-oSet">
+            </div>
+
+            <!-- oSet() ends here -->
+
+            <hr>
+
+            <!-- oGet() -->
+            <a name="oGet"></a>
+            <h4><code>oGet(key, oKey)</code></h4>
+
+            <p>This will fetch the value saved in the key <code>oKey</code>
+                inside the object referred by <code>key</code> in the cache.</p>
+
+            <p>If <code>key</code> does not exists then it will return <code>undefined</code>.</p>
+            <p>If <code>oKey</code> does not exists then it will return <code>undefined</code>.</p>
+
+            <pre><code>obj.oGet('players', 'p1');</code></pre>
+            <pre><code>obj.oGet('players', 'unknown');  // return undefined</code></pre>
+
+            <div>
+                <a class="btn btn-primary"
+                   role="button"
+                   data-toggle="collapse"
+                   href="#collapse-oGet"
+                   aria-expanded="false"
+                   aria-controls="collapse-oGet">Output</a>
+            </div>
+            <div class="collapse" id="collapse-oGet">
+            </div>
+
+            <!-- oGet() ends here -->
+
+            <hr>
+
+            <!-- oGetAll() -->
+            <a name="oGetAll"></a>
+            <h4><code>oGetAll(key)</code></h4>
+
+            <p>This will fetch all values saved in the
+                given <code>key</code> of the cache.</p>
+
+            <p>If <code>key</code> does not exists then return <code>undefined</code>.</p>
+
+            <pre><code>obj.oGetAll('players');</code></pre>
+
+            <div>
+                <a class="btn btn-primary"
+                   role="button"
+                   data-toggle="collapse"
+                   href="#collapse-oGetAll"
+                   aria-expanded="false"
+                   aria-controls="collapse-oGetAll">Output</a>
+            </div>
+            <div class="collapse" id="collapse-oGetAll">
+            </div>
+
+            <!-- oGetAll() ends here -->
+
+            <hr>
+
+            <!-- oGetKeys() -->
+            <a name="oGetKeys"></a>
+            <h4><code>oGetKeys(key)</code></h4>
+
+            <p>This will return all the <code>oKey</code> in the object
+                referred by <code>key</code> in the cache.</p>
+
+            <p>On success return an array containing all the oKey. Otherwise, false.</p>
+
+            <pre><code>obj.oGetKeys('players');</code></pre>
+
+            <div>
+                <a class="btn btn-primary"
+                   role="button"
+                   data-toggle="collapse"
+                   href="#collapse-oGetKeys"
+                   aria-expanded="false"
+                   aria-controls="collapse-oGetKeys">Output</a>
+            </div>
+            <div class="collapse" id="collapse-oGetKeys">
+            </div>
+
+            <!-- oGetKeys() ends here -->
+
+            <hr>
+
+            <!-- oExists() -->
+            <a name="oExists"></a>
+            <h4><code>oExists(key, oKey)</code></h4>
+
+            <p>This will check if the <code>oKey</code> exists in the object
+                referred by <code>key</code> in the cache.</p>
+
+            <pre><code>obj.oExists('players', 'p2');   // this will return true</code></pre>
+            <pre><code>obj.oExists('players', 'unknown');   // this will return false</code></pre>
+
+            <div>
+                <a class="btn btn-primary"
+                   role="button"
+                   data-toggle="collapse"
+                   href="#collapse-oExists"
+                   aria-expanded="false"
+                   aria-controls="collapse-oExists">Output</a>
+            </div>
+            <div class="collapse" id="collapse-oExists">
+            </div>
+
+            <!-- oExists() ends here -->
+
+            <hr>
+
+            <!-- oLength() -->
+            <a name="oLength"></a>
+            <h4><code>oLength(key)</code></h4>
+
+            <p>This will return the total number of <code>oKey</code> in the
+                object referred by the <code>key</code> in the cache.</p>
+
+            <pre><code>obj.oLength('players');</code></pre>
+            <pre><code>obj.oLength('unknown');   // this will return -1</code></pre>
+
+            <div>
+                <a class="btn btn-primary"
+                   role="button"
+                   data-toggle="collapse"
+                   href="#collapse-oLength"
+                   aria-expanded="false"
+                   aria-controls="collapse-oLength">Output</a>
+            </div>
+            <div class="collapse" id="collapse-oLength">
+            </div>
+
+            <!-- oLength() ends here -->
+
+            <hr>
+
+            <!-- oDel() -->
+            <a name="oDel"></a>
+            <h4><code>oDel(key, oKey)</code></h4>
+
+            <p>This will delete the key <code>oKey</code> from the object
+                referred by <code>key</code> in the cache.</p>
+
+            <p>Returns boolean value.</p>
+
+            <p>On success return true. Otherwise false.</p>
+
+            <pre><code>obj.oDel('players', 'p2');   // this will return true</code></pre>
+
+            <div>
+                <a class="btn btn-primary"
+                   role="button"
+                   data-toggle="collapse"
+                   href="#collapse-oDel"
+                   aria-expanded="false"
+                   aria-controls="collapse-oDel">Output</a>
+            </div>
+            <div class="collapse" id="collapse-oDel">
+            </div>
+
+            <!-- oDel() ends here -->
+
+            <hr>
+
+            <a name="stack-methods"></a>
+            <h4 class="text-center"><a href="#stack-methods">Stack Methods</a></h4>
+
+            <!-- stackInit() -->
+            <a name="stackInit"></a>
+            <h4><code>stackInit(key)</code></h4>
+
+            <p>This will initialise a stack referred by <code>key</code>
+                in the cache.</p>
+
+            <pre><code>obj.stackInit('myStack');</code></pre>
+
+            <div>
+                <a class="btn btn-primary"
+                   role="button"
+                   data-toggle="collapse"
+                   href="#collapse-stackInit"
+                   aria-expanded="false"
+                   aria-controls="collapse-stackInit">Output</a>
+            </div>
+            <div class="collapse" id="collapse-stackInit">
+            </div>
+
+            <!-- stackInit() ends here -->
+
+            <hr>
+
+            <!-- stackExists() -->
+            <a name="stackExists"></a>
+            <h4><code>stackExists(key)</code></h4>
+
+            <p>This will check if the stack referred by <code>key</code>
+                exists in the cache.</p>
+
+            <p>Return <code>true</code> if stack exists. Otherwise, <code>false</code>.</p>
+
+            <pre><code>obj.stackExists('myStack');</code></pre>
+
+            <div>
+                <a class="btn btn-primary"
+                   role="button"
+                   data-toggle="collapse"
+                   href="#collapse-stackExists"
+                   aria-expanded="false"
+                   aria-controls="collapse-stackExists">Output</a>
+            </div>
+            <div class="collapse" id="collapse-stackExists">
+            </div>
+
+            <!-- stackExists() ends here -->
+
+            <hr>
+
+            <!-- stackPush() -->
+            <a name="stackPush"></a>
+            <h4><code>stackPush(key, value)</code></h4>
+
+            <p>This will push a <code>value</code> in the stack referred by
+                <code>key</code> in the cache.</p>
+
+            <p><code>value</code> can be a number, string, array or object.</p>
+
+            <pre><code>obj.stackPush('myStack', 10);    // push number</code></pre>
+            <pre><code>obj.stackPush('myStack', 'Yusuf Shakeel');   // push string</code></pre>
+            <pre><code>obj.stackPush('myStack', [1, 2]);    // push array</code></pre>
+            <pre><code>obj.stackPush('myStack', { a: 10 });    // push object</code></pre>
+
+            <div>
+                <a class="btn btn-primary"
+                   role="button"
+                   data-toggle="collapse"
+                   href="#collapse-stackPush"
+                   aria-expanded="false"
+                   aria-controls="collapse-stackPush">Output</a>
+            </div>
+            <div class="collapse" id="collapse-stackPush">
+            </div>
+
+            <!-- stackPush() ends here -->
+
+            <hr>
+
+            <!-- stackPeek() -->
+            <a name="stackPeek"></a>
+            <h4><code>stackPeek(key)</code></h4>
+
+            <p>This will return the top element of the stack referred by
+                <code>key</code> in the cache.</p>
+
+            <p>Will return <code>null</code> if stack does not exists.</p>
+
+            <pre><code>obj.stackPeek('myStack');</code></pre>
+
+            <div>
+                <a class="btn btn-primary"
+                   role="button"
+                   data-toggle="collapse"
+                   href="#collapse-stackPeek"
+                   aria-expanded="false"
+                   aria-controls="collapse-stackPeek">Output</a>
+            </div>
+            <div class="collapse" id="collapse-stackPeek">
+            </div>
+
+            <!-- stackPeek() ends here -->
+
+            <hr>
+
+            <!-- stackPop() -->
+            <a name="stackPop"></a>
+            <h4><code>stackPop(key)</code></h4>
+
+            <p>This will pop the top element from the stack referred by
+                <code>key</code> in the cache.</p>
+
+            <p>Will return <code>undefined</code> if stack does not exists.</p>
+
+            <pre><code>obj.stackPop('myStack');</code></pre>
+
+            <div>
+                <a class="btn btn-primary"
+                   role="button"
+                   data-toggle="collapse"
+                   href="#collapse-stackPop"
+                   aria-expanded="false"
+                   aria-controls="collapse-stackPop">Output</a>
+            </div>
+            <div class="collapse" id="collapse-stackPop">
+            </div>
+
+            <!-- stackPop() ends here -->
+
+            <hr>
+
+            <!-- stackLength() -->
+            <a name="stackLength"></a>
+            <h4><code>stackLength(key)</code></h4>
+
+            <p>This will return total number of elements in the stack referred by
+                <code>key</code> in the cache.</p>
+
+            <p>On success return number of elements in the stack. Otherwise -1.</p>
+
+            <pre><code>obj.stackLength('myStack');</code></pre>
+
+            <div>
+                <a class="btn btn-primary"
+                   role="button"
+                   data-toggle="collapse"
+                   href="#collapse-stackLength"
+                   aria-expanded="false"
+                   aria-controls="collapse-stackLength">Output</a>
+            </div>
+            <div class="collapse" id="collapse-stackLength">
+            </div>
+
+            <!-- stackLength() ends here -->
+
+            <hr>
+
+            <!-- stackIsEmpty() -->
+            <a name="stackIsEmpty"></a>
+            <h4><code>stackIsEmpty(key)</code></h4>
+
+            <p>This will check is the stack referred by
+                <code>key</code> in the cache is empty.</p>
+
+            <p>If empty will return <code>true</code>. Otherwise, <code>false</code>.</p>
+
+            <p>If <code>key</code> does not exists then return <code>undefined</code>.</p>
+
+            <pre><code>obj.stackIsEmpty('myStack');</code></pre>
+
+            <div>
+                <a class="btn btn-primary"
+                   role="button"
+                   data-toggle="collapse"
+                   href="#collapse-stackIsEmpty"
+                   aria-expanded="false"
+                   aria-controls="collapse-stackIsEmpty">Output</a>
+            </div>
+            <div class="collapse" id="collapse-stackIsEmpty">
+            </div>
+
+            <!-- stackIsEmpty() ends here -->
+
+            <hr>
+
+            <!-- stackPurge() -->
+            <a name="stackPurge"></a>
+            <h4><code>stackPurge(key)</code></h4>
+
+            <p>This will empty the stack referred by
+                <code>key</code> in the cache.</p>
+
+            <p>Will return <code>true</code> on success. Otherwise, <code>false</code>.</p>
+
+            <pre><code>obj.stackPurge('myStack');</code></pre>
+
+            <div>
+                <a class="btn btn-primary"
+                   role="button"
+                   data-toggle="collapse"
+                   href="#collapse-stackPurge"
+                   aria-expanded="false"
+                   aria-controls="collapse-stackPurge">Output</a>
+            </div>
+            <div class="collapse" id="collapse-stackPurge">
+            </div>
+
+            <!-- stackPurge() ends here -->
+
+            <hr>
+
+            <!-- stackDelete() -->
+            <a name="stackDelete"></a>
+            <h4><code>stackDelete(key)</code></h4>
+
+            <p>This will delete the stack referred by
+                <code>key</code> from the cache.</p>
+
+            <p>Will return <code>true</code> on success. Otherwise, <code>false</code>.</p>
+
+            <pre><code>obj.stackDelete('myStack');</code></pre>
+
+            <div>
+                <a class="btn btn-primary"
+                   role="button"
+                   data-toggle="collapse"
+                   href="#collapse-stackDelete"
+                   aria-expanded="false"
+                   aria-controls="collapse-stackDelete">Output</a>
+            </div>
+            <div class="collapse" id="collapse-stackDelete">
+            </div>
+
+            <!-- stackDelete() ends here -->
+
+            <hr>
+
+            <a name="queue-methods"></a>
+            <h4 class="text-center"><a href="#queue-methods">Queue Methods</a></h4>
+
+            <!-- queueInit() -->
+            <a name="queueInit"></a>
+            <h4><code>queueInit(key)</code></h4>
+
+            <p>This will initialise a queue referred by <code>key</code>
+                in the cache.</p>
+
+            <pre><code>obj.queueInit('myQueue');</code></pre>
+
+            <div>
+                <a class="btn btn-primary"
+                   role="button"
+                   data-toggle="collapse"
+                   href="#collapse-queueInit"
+                   aria-expanded="false"
+                   aria-controls="collapse-queueInit">Output</a>
+            </div>
+            <div class="collapse" id="collapse-queueInit">
+            </div>
+
+            <!-- queueInit() ends here -->
+
+            <hr>
+
+            <!-- queueExists() -->
+            <a name="queueExists"></a>
+            <h4><code>queueExists(key)</code></h4>
+
+            <p>This will check if the queue referred by <code>key</code>
+                exists in the cache.</p>
+
+            <p>Return <code>true</code> if queue exists. Otherwise, <code>false</code>.</p>
+
+            <pre><code>obj.queueExists('myQueue');</code></pre>
+
+            <div>
+                <a class="btn btn-primary"
+                   role="button"
+                   data-toggle="collapse"
+                   href="#collapse-queueExists"
+                   aria-expanded="false"
+                   aria-controls="collapse-queueExists">Output</a>
+            </div>
+            <div class="collapse" id="collapse-queueExists">
+            </div>
+
+            <!-- queueExists() ends here -->
+
+            <hr>
+
+            <!-- enqueue() -->
+            <a name="enqueue"></a>
+            <h4><code>enqueue(key, value)</code></h4>
+
+            <p>This will insert a <code>value</code> from the right side
+                in the queue referred by <code>key</code> in the cache.</p>
+
+            <p><code>value</code> can be a number, string, array or object.</p>
+
+            <pre><code>obj.enqueue('myQueue', 10);    // enqueue number</code></pre>
+            <pre><code>obj.enqueue('myQueue', 'Yusuf Shakeel');   // enqueue string</code></pre>
+            <pre><code>obj.enqueue('myQueue', [1, 2]);    // enqueue array</code></pre>
+            <pre><code>obj.enqueue('myQueue', { a: 10 });    // enqueue object</code></pre>
+
+            <div>
+                <a class="btn btn-primary"
+                   role="button"
+                   data-toggle="collapse"
+                   href="#collapse-enqueue"
+                   aria-expanded="false"
+                   aria-controls="collapse-enqueue">Output</a>
+            </div>
+            <div class="collapse" id="collapse-enqueue">
+            </div>
+
+            <!-- enqueue() ends here -->
+
+            <hr>
+
+            <!-- dequeue() -->
+            <a name="dequeue"></a>
+            <h4><code>dequeue(key)</code></h4>
+
+            <p>This will remove the first element from the left side
+                of the queue referred by <code>key</code> in the cache.</p>
+
+            <p>Will return <code>null</code> if queue does not exists.</p>
+
+            <pre><code>obj.dequeue('myQueue');</code></pre>
+
+            <div>
+                <a class="btn btn-primary"
+                   role="button"
+                   data-toggle="collapse"
+                   href="#collapse-dequeue"
+                   aria-expanded="false"
+                   aria-controls="collapse-dequeue">Output</a>
+            </div>
+            <div class="collapse" id="collapse-dequeue">
+            </div>
+
+            <!-- dequeue() ends here -->
+
+            <hr>
+
+            <!-- queueLPeek() -->
+            <a name="queueLPeek"></a>
+            <h4><code>queueLPeek(key)</code></h4>
+
+            <p>This will return the first element from the left side of the
+                queue referred by <code>key</code> in the cache.</p>
+
+            <p>Will return <code>null</code> if queue does not exists.</p>
+
+            <pre><code>obj.queueLPeek('myQueue');</code></pre>
+
+            <div>
+                <a class="btn btn-primary"
+                   role="button"
+                   data-toggle="collapse"
+                   href="#collapse-queueLPeek"
+                   aria-expanded="false"
+                   aria-controls="collapse-queueLPeek">Output</a>
+            </div>
+            <div class="collapse" id="collapse-queueLPeek">
+            </div>
+
+            <!-- queueLPeek() ends here -->
+
+            <hr>
+
+            <!-- queueRPeek() -->
+            <a name="queueRPeek"></a>
+            <h4><code>queueRPeek(key)</code></h4>
+
+            <p>This will return the last element from the right side of the
+                queue referred by <code>key</code> in the cache.</p>
+
+            <p>Will return <code>null</code> if queue does not exists.</p>
+
+            <pre><code>obj.queueRPeek('myQueue');</code></pre>
+
+            <div>
+                <a class="btn btn-primary"
+                   role="button"
+                   data-toggle="collapse"
+                   href="#collapse-queueRPeek"
+                   aria-expanded="false"
+                   aria-controls="collapse-queueRPeek">Output</a>
+            </div>
+            <div class="collapse" id="collapse-queueRPeek">
+            </div>
+
+            <!-- queueRPeek() ends here -->
+
+            <hr>
+
+            <!-- queueLength() -->
+            <a name="queueLength"></a>
+            <h4><code>queueLength(key)</code></h4>
+
+            <p>This will return total number of elements in the queue referred by
+                <code>key</code> in the cache.</p>
+
+            <p>On success return number of elements in the queue. Otherwise -1.</p>
+
+            <pre><code>obj.queueLength('myQueue');</code></pre>
+
+            <div>
+                <a class="btn btn-primary"
+                   role="button"
+                   data-toggle="collapse"
+                   href="#collapse-queueLength"
+                   aria-expanded="false"
+                   aria-controls="collapse-queueLength">Output</a>
+            </div>
+            <div class="collapse" id="collapse-queueLength">
+            </div>
+
+            <!-- queueLength() ends here -->
+
+            <hr>
+
+            <!-- queueIsEmpty() -->
+            <a name="queueIsEmpty"></a>
+            <h4><code>queueIsEmpty(key)</code></h4>
+
+            <p>This will check is the queue referred by
+                <code>key</code> in the cache is empty.</p>
+
+            <p>If empty will return <code>true</code>. Otherwise, <code>false</code>.</p>
+
+            <p>If <code>key</code> does not exists then return <code>undefined</code>.</p>
+
+            <pre><code>obj.queueIsEmpty('myQueue');</code></pre>
+
+            <div>
+                <a class="btn btn-primary"
+                   role="button"
+                   data-toggle="collapse"
+                   href="#collapse-queueIsEmpty"
+                   aria-expanded="false"
+                   aria-controls="collapse-queueIsEmpty">Output</a>
+            </div>
+            <div class="collapse" id="collapse-queueIsEmpty">
+            </div>
+
+            <!-- queueIsEmpty() ends here -->
+
+            <hr>
+
+            <!-- queuePurge() -->
+            <a name="queuePurge"></a>
+            <h4><code>queuePurge(key)</code></h4>
+
+            <p>This will empty the queue referred by
+                <code>key</code> in the cache.</p>
+
+            <p>Will return <code>true</code> on success. Otherwise, <code>false</code>.</p>
+
+            <pre><code>obj.queuePurge('myQueue');</code></pre>
+
+            <div>
+                <a class="btn btn-primary"
+                   role="button"
+                   data-toggle="collapse"
+                   href="#collapse-queuePurge"
+                   aria-expanded="false"
+                   aria-controls="collapse-queuePurge">Output</a>
+            </div>
+            <div class="collapse" id="collapse-queuePurge">
+            </div>
+
+            <!-- queuePurge() ends here -->
+
+            <hr>
+
+            <!-- queueDelete() -->
+            <a name="queueDelete"></a>
+            <h4><code>queueDelete(key)</code></h4>
+
+            <p>This will delete the queue referred by
+                <code>key</code> from the cache.</p>
+
+            <p>Will return <code>true</code> on success. Otherwise, <code>false</code>.</p>
+
+            <pre><code>obj.queueDelete('myQueue');</code></pre>
+
+            <div>
+                <a class="btn btn-primary"
+                   role="button"
+                   data-toggle="collapse"
+                   href="#collapse-queueDelete"
+                   aria-expanded="false"
+                   aria-controls="collapse-queueDelete">Output</a>
+            </div>
+            <div class="collapse" id="collapse-queueDelete">
+            </div>
+
+            <!-- queueDelete() ends here -->
+
+            <hr>
+
+
+        </div>
+
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+            <div class="text-center">
+                <h3>Donate</h3>
+                <p>Feeling generous &hearts; Buy me a cup of tea</p>
+                <p><a href="https://www.paypal.me/yusufshakeel">Donate via PayPal</a></p>
+            </div>
+
+            <hr>
+
+            <div class="text-center">
+                <p>Copyright &copy; Yusuf Shakeel</p>
+                <p>MIT License</p>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+<!-- javascript -->
+
+<!-- jQuery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+
+<!-- dyScrollUpJS -->
+<script src="https://cdn.jsdelivr.net/npm/dyscrollupjs@1.1.4/js/dyscrollup.min.js"></script>
+<script>
+    $(function () {
+        dyscrollup.init({
+            showafter: 600,
+            scrolldelay: 500,
+            position: "right",
+            image: "https://cdn.jsdelivr.net/npm/dyscrollupjs@1.1.4/image/32.png",
+            shape: "square",
+            width: 32,
+            height: 32
+        });
+    })
+</script>
+
+<!-- dyCacheJS -->
+<script src="https://cdn.jsdelivr.net/npm/dycachejs@1.4.0/dist/js/dyCache.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/dycachejs@1.4.0/src/js/index-page-example.js"></script>
+</body>
+</html>
