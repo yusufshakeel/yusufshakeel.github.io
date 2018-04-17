@@ -1,0 +1,23 @@
+{
+  "name": "yusufshakeel.github.io",
+  "version": "1.0.0",
+  "description": "This is Yusuf Shakeel GitHub website.",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yusufshakeel/yusufshakeel.github.io.git"
+  },
+  "keywords": [
+    "yusufshakeel",
+    "github"
+  ],
+  "author": "Yusuf Shakeel",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yusufshakeel/yusufshakeel.github.io/issues"
+  },
+  "homepage": "https://github.com/yusufshakeel/yusufshakeel.github.io#readme"
+}
