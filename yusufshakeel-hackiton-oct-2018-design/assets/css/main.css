@@ -1,0 +1,55 @@
+/*!
+
+=========================================================
+File: main.css
+
+Date: 06-Oct-2018 Sat
+
+Author: Yusuf Shakeel
+GitHub: https://github.com/yusufshakeel
+Website: https://www.yusufshakeel.com
+
+Description: This file contains the custom style for the
+             website.
+
+=========================================================
+
+*/
+
+body {
+    padding-top: 70px;
+}
+
+/*=main-navbar
+for the navbar
+--------------------------*/
+#main-navbar {
+    background-color: #5e72e4;
+    background-image: linear-gradient(to right, #5e72e4, #5E7306);
+}
+
+/*=hero
+for the page hero
+--------------------------*/
+#hero {
+    background-position: center -230px;
+    color: #dfdfdf;
+    background-image: url('../../assets/img/hero.jpeg');
+    height: 420px;
+}
+
+/*=textarea
+prevent textarea from resize
+--------------------------------*/
+textarea.resize-none {
+    resize: none;
+}
+
+/*=footer-social-icons
+--------------------------------*/
+.footer-social-icons .fa {
+    color: #777;
+}
+.footer-social-icons .fa:hover {
+    color: #333;
+}
